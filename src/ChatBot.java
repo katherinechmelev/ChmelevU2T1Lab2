@@ -44,5 +44,18 @@ public class ChatBot {
     public String goodbye() {
         return "It was nice talking with you! Have a great day! Sincerely, " + name;
     }
+
+    public int leftoverYarn(int yarnBought, int yarnUsed) { //subtracts amount of yarn used from yarn bough to return an integer value of how much yarn was left over
+       return yarnBought-yarnUsed;
+    }
+
+    public void tooMuchYarn(int yarnBought, int yarnUsed) { //assesses if too much yarn was bought and either says if we bought too much or could have bought more
+        if (yarnBought > yarnUsed) {
+            System.out.println("We bought too much yarn! How wasteful.");
+        }else{
+            System.out.println("We could've bought more yarn.");
+        }
+    }
+
 }
 
